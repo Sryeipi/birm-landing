@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>BIRM® — Inmunomodulador natural ecuatoriano</title>
+  <meta name="description" content="BIRM® equilibra tu sistema inmune, no lo fuerza. Extracto natural de Dulcamara, con patente americana y +40 años de investigación. Hecho en Ecuador." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===========================================================
+       Announcement bar
+       =========================================================== -->
+  <div class="announce" id="announce">
+    <div class="container announce-row">
+      <span class="announce-item"><span class="announce-dot"></span> Envío gratis en Quito y Guayaquil sobre $40</span>
+      <span class="announce-sep">·</span>
+      <span class="announce-item">Disponible en Fybeca, Cruz Azul, Sana Sana, Pharmacys</span>
+    </div>
+  </div>
+
+  <!-- ===========================================================
+       Loader
+       =========================================================== -->
+  <div class="loader" id="loader">
+    <div class="loader-bg"></div>
+    <div class="loader-mark">BIRM<sup>®</sup></div>
+    <div class="loader-tagline">Equilibra · No fuerza</div>
+    <div class="loader-progress">
+      <div class="loader-progress-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-count" id="loader-count">0000 / 1152</div>
+  </div>
+
+  <!-- ===========================================================
+       Nav
+       =========================================================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-row">
+      <a href="#top" class="nav-mark">BIRM<sup>®</sup></a>
+      <div class="nav-links">
+        <a href="#catalogo" data-scroll-to="catalogo">Productos</a>
+        <a href="#ciencia" data-scroll-to="ciencia">La ciencia</a>
+        <a href="#origen" data-scroll-to="origen">Origen</a>
+        <a href="#contacto" data-scroll-to="contacto">Contacto</a>
+      </div>
+      <button class="nav-cart" id="nav-cart" aria-label="Abrir carrito">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M2 3h2l1.5 9h7L14 5H4.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="6" cy="14" r="1" fill="currentColor" stroke="none" />
+          <circle cx="12" cy="14" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        <span>Carrito</span>
+        <span class="nav-cart-count" id="nav-cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===========================================================
+       Hero — Scroll Cinema
+       =========================================================== -->
+  <section class="cinema" id="cinema">
+    <div class="cinema-pin">
+      <canvas class="cinema-canvas" id="cinema-canvas"></canvas>
+      <div class="cinema-vignette"></div>
+
+      <!-- Intro overlay -->
+      <div class="cinema-overlay-intro" id="cinema-intro">
+        <span class="eyebrow" style="display:inline-block; margin-bottom:24px;">Inmunomodulador · Ecuador · desde 1980</span>
+        <h1>Equilibra tu inmunidad.<br/><em>No la fuerces.</em></h1>
+        <p class="cinema-overlay-sub">Extracto natural de Dulcamara amazónica.<br/>Patente americana. Cuarenta años de investigación.</p>
+        <div class="cinema-overlay-cta">
+          <a href="#catalogo" class="btn btn-primary" data-scroll-to="catalogo">Ver productos</a>
+          <a href="#ciencia" class="btn btn-ghost" data-scroll-to="ciencia">Conoce BIRM</a>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" id="scroll-cue">Scroll</div>
+
+      <!-- Progress indicator (right side) -->
+      <div class="cinema-progress" id="cinema-progress"></div>
+
+      <!-- Product popups (dynamically rendered) -->
+      <div id="cinema-popups"></div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Pull quote
+       =========================================================== -->
+  <section class="ciencia is-light" id="ciencia">
+    <div class="pullquote reveal">
+      <p class="pullquote-q">
+        BIRM equilibra tu sistema inmune. <em>No lo sube. No lo baja.</em>
+        Lo lleva a su punto natural — como debe ser.
+      </p>
+      <p class="pullquote-attr">Dr. Edwin Cevallos A. · creador de BIRM®</p>
+    </div>
+
+    <!-- Cards de credibilidad -->
+    <div class="container section" style="padding-top:0;">
+      <div class="section-head reveal">
+        <span class="eyebrow">La ciencia detrás</span>
+        <h2>Cuarenta años de investigación,<br/>una sola idea: <em>equilibrio.</em></h2>
+        <p>BIRM® es el extracto natural de Dulcamara, planta de la Amazonía ecuatoriana, estudiada desde los años ochenta como modulador del sistema inmune. Es el único inmunomodulador natural con patente americana.</p>
+      </div>
+
+      <div class="ciencia-grid reveal-stagger">
+        <div class="ciencia-card">
+          <span class="ciencia-card-num"><em>US</em> Patent</span>
+          <h3>Patente americana</h3>
+          <p>Único inmunomodulador natural con patente registrada en Estados Unidos.</p>
+        </div>
+        <div class="ciencia-card">
+          <span class="ciencia-card-num">+40<em>años</em></span>
+          <h3>Investigación continua</h3>
+          <p>Más de cuatro décadas de estudios clínicos y observación científica.</p>
+        </div>
+        <div class="ciencia-card">
+          <span class="ciencia-card-num">Dr.<em> EC</em></span>
+          <h3>Dr. Edwin Cevallos</h3>
+          <p>Creado por el médico e investigador ecuatoriano Edwin Cevallos A.</p>
+        </div>
+        <div class="ciencia-card">
+          <span class="ciencia-card-num">100<em>%</em></span>
+          <h3>Origen natural</h3>
+          <p>Extracto puro de Dulcamara, planta amazónica. Sin efectos secundarios reportados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Origen — Dulcamara amazónica
+       =========================================================== -->
+  <section class="origen" id="origen">
+    <div class="container origen-row">
+      <div class="origen-visual reveal">
+        <div class="origen-frame">
+          <img src="assets/frames/t1/060.webp" alt="Bosque amazónico" loading="lazy"/>
+          <div class="origen-frame-tag">
+            <span class="origen-frame-tag-line"></span>
+            Solanum dulcamara
+          </div>
+        </div>
+        <div class="origen-coords">
+          <span>0° 13' 35.6&quot; S</span>
+          <span>78° 30' 28.4&quot; W</span>
+          <span>Ecuador · Amazonía</span>
+        </div>
+      </div>
+      <div class="origen-text reveal">
+        <span class="eyebrow">El origen</span>
+        <h2>Una planta humilde,<br/>una ciencia <em>profunda.</em></h2>
+        <p>La <strong>Dulcamara</strong> crece silvestre en los suelos húmedos del Ecuador. Durante siglos, las comunidades amazónicas la usaron para fortalecer al cuerpo. En 1980, el doctor Edwin Cevallos logró extraer y estandarizar su principio activo — el corazón de BIRM®.</p>
+        <p>No es una infusión. No es un té. Es un <strong>extracto científicamente estabilizado</strong>, con dosis precisa y reproducible, estudiado por más de cuatro décadas.</p>
+        <ul class="origen-facts">
+          <li><span>1980</span><br/>Primer extracto estabilizado</li>
+          <li><span>1989</span><br/>Patente americana otorgada</li>
+          <li><span>40+</span><br/>Años de estudios científicos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Fundador — Dr. Edwin Cevallos
+       =========================================================== -->
+  <section class="fundador" id="fundador">
+    <div class="container fundador-row">
+      <div class="fundador-portrait reveal">
+        <div class="fundador-portrait-inner">
+          <div class="fundador-monogram">EC<sup>·</sup></div>
+          <div class="fundador-portrait-cap">Quito · 1980 — hoy</div>
+        </div>
+      </div>
+      <div class="fundador-text reveal">
+        <span class="eyebrow">Una vida, una promesa</span>
+        <h2>Dr. Edwin Cevallos A.</h2>
+        <p class="fundador-role">Médico, investigador, creador de BIRM®</p>
+        <blockquote class="fundador-quote">
+          “BIRM no fuerza a tu cuerpo. <em>Lo escucha.</em> Toma lo que naturalmente le faltaba para equilibrar su defensa.”
+        </blockquote>
+        <p class="fundador-bio">Hijo de Quito, médico de profesión, investigador por vocación. Dedicó más de cuatro décadas a comprender cómo una planta humilde de los Andes podía ayudar al sistema inmune. Su trabajo científico llevó a BIRM® a ser el primer inmunomodulador natural patentado en Estados Unidos.</p>
+        <div class="fundador-meta">
+          <div class="fundador-meta-item">
+            <strong data-count-to="40" data-count-suffix="+">40+</strong>
+            <span>años de investigación</span>
+          </div>
+          <div class="fundador-meta-item">
+            <strong>US Patent</strong>
+            <span>inmunomodulador natural</span>
+          </div>
+          <div class="fundador-meta-item">
+            <strong data-count-to="6">6</strong>
+            <span>líneas de producto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Catálogo
+       =========================================================== -->
+  <section class="catalog section is-light" id="catalogo">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Catálogo completo</span>
+        <h2>Doce formatos.<br/>Una sola <em>familia.</em></h2>
+        <p>De cápsulas a soluciones orales, de pediátrico a deportivo, de medicina a cuidado personal — toda la línea BIRM® en un solo lugar.</p>
+      </div>
+
+      <div class="catalog-grid reveal-stagger" id="catalog-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Cómo se toma
+       =========================================================== -->
+  <section class="modo section is-light" id="modo">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cómo se toma</span>
+        <h2>Sencillo,<br/>todos los <em>días.</em></h2>
+        <p>Cada presentación BIRM® tiene su propia forma de uso. Aquí va la guía rápida — siempre puedes consultar a tu médico o llamarnos.</p>
+      </div>
+      <div class="modo-grid reveal-stagger">
+        <div class="modo-card">
+          <span class="modo-card-step">01</span>
+          <h3>Cápsulas</h3>
+          <p><strong>1 cápsula al día</strong>, en ayunas, con un vaso de agua.</p>
+          <span class="modo-card-line">Preventivo · Concentrado · Sport</span>
+        </div>
+        <div class="modo-card">
+          <span class="modo-card-step">02</span>
+          <h3>Solución oral</h3>
+          <p><strong>1 cucharadita</strong> diaria, directa o disuelta en agua templada.</p>
+          <span class="modo-card-line">Preventivo · Concentrado</span>
+        </div>
+        <div class="modo-card">
+          <span class="modo-card-step">03</span>
+          <h3>Kids</h3>
+          <p><strong>Según peso</strong>, una vez al día. Sabor natural — fácil de dar.</p>
+          <span class="modo-card-line">BIRM Kids</span>
+        </div>
+        <div class="modo-card">
+          <span class="modo-card-step">04</span>
+          <h3>Healing Helper</h3>
+          <p><strong>1–2 tabletas</strong> según necesidad, con alimento.</p>
+          <span class="modo-card-line">HH 30 / 60</span>
+        </div>
+      </div>
+      <p class="modo-note reveal">Consulta a tu médico antes de iniciar cualquier suplemento, especialmente si tomas medicación crónica o estás embarazada.</p>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       FAQ
+       =========================================================== -->
+  <section class="faq section is-light" id="faq">
+    <div class="container faq-row">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Lo que la gente<br/>nos <em>pregunta.</em></h2>
+        <p>Respuestas honestas a las dudas más comunes sobre BIRM®.</p>
+        <a href="https://wa.me/593994215836" target="_blank" rel="noopener" class="faq-contact">
+          ¿Tienes otra pregunta? Escríbenos por WhatsApp →
+        </a>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>¿Es seguro? ¿Tiene efectos secundarios?</summary>
+          <div class="faq-item-body">
+            <p>BIRM® es un extracto natural con más de cuatro décadas de uso. Los estudios y la experiencia clínica no han reportado efectos secundarios significativos cuando se usa según indicación. No es un medicamento de prescripción — es un suplemento natural inmunomodulador.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Desde qué edad se puede tomar?</summary>
+          <div class="faq-item-body">
+            <p>BIRM Kids está formulado específicamente para niños y se puede usar desde edades tempranas, ajustando la dosis al peso. Los adultos pueden tomar las presentaciones Preventivo o Concentrado según indicación.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto tarda en notarse el efecto?</summary>
+          <div class="faq-item-body">
+            <p>Como inmunomodulador, BIRM® actúa equilibrando el sistema inmune de forma gradual. La mayoría de personas comienza a notar diferencias en su bienestar general entre las 4 y 8 semanas de uso continuo.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Se puede tomar con otros medicamentos?</summary>
+          <div class="faq-item-body">
+            <p>BIRM® es compatible con la mayoría de tratamientos por su naturaleza inmunomoduladora. Aun así, recomendamos siempre consultar a tu médico si estás bajo tratamiento crónico o tomando medicación inmunosupresora.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo se conserva?</summary>
+          <div class="faq-item-body">
+            <p>Conservar en lugar fresco y seco, protegido de la luz directa. Las soluciones orales, una vez abiertas, mantener refrigeradas. Revisa la fecha de vencimiento en el envase.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Es apto para vegetarianos / veganos?</summary>
+          <div class="faq-item-body">
+            <p>BIRM® es de origen 100% vegetal — el extracto de Dulcamara y los excipientes naturales. Las cápsulas son aptas para vegetarianos. Para detalles específicos de cada presentación, revisa el envase o consúltanos.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Dónde lo consigo?</summary>
+          <div class="faq-item-body">
+            <p>BIRM® está disponible en las principales cadenas de farmacias del Ecuador: Fybeca, Cruz Azul, Sana Sana, Pharmacys, Medicity, Económicas y MIA. También puedes pedirlo directo por nuestro WhatsApp o por este sitio.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Banda CTA final
+       =========================================================== -->
+  <section class="cta-band" id="cta-band">
+    <div class="cta-band-bg">
+      <img src="assets/frames/t6/120.webp" alt="" aria-hidden="true" loading="lazy"/>
+    </div>
+    <div class="container cta-band-row">
+      <span class="eyebrow">Empieza hoy</span>
+      <h2>Tu inmunidad,<br/>en <em>equilibrio.</em></h2>
+      <p>Cuarenta años de ciencia detrás de cada cápsula. Una promesa simple: equilibrio, no fuerza.</p>
+      <div class="cta-band-buttons">
+        <a href="#catalogo" class="btn btn-primary" data-scroll-to="catalogo">Ver el catálogo</a>
+        <a href="https://wa.me/593994215836" class="btn btn-ghost" target="_blank" rel="noopener">Hablar con un asesor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Pharmacy marquee
+       =========================================================== -->
+  <section class="marquee">
+    <p class="marquee-label">Disponible en farmacias del Ecuador</p>
+    <div class="marquee-track">
+      <span class="marquee-item">Fybeca</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Cruz Azul</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Sana Sana</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Pharmacys</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Medicity</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Económicas</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">MIA</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">San Gregorio</span>
+      <span class="marquee-item">·</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item">Fybeca</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Cruz Azul</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Sana Sana</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Pharmacys</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Medicity</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">Económicas</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">MIA</span>
+      <span class="marquee-item">·</span>
+      <span class="marquee-item">San Gregorio</span>
+      <span class="marquee-item">·</span>
+    </div>
+  </section>
+
+  <!-- ===========================================================
+       Footer
+       =========================================================== -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <h3>BIRM<sup>®</sup></h3>
+        <p>Inmunomodulador natural ecuatoriano. Hecho en Ecuador, exportado al mundo. Una promesa de vida desde 1980.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ventas@birm.com.ec">ventas@birm.com.ec</a></li>
+          <li><a href="https://wa.me/593994215836" target="_blank" rel="noopener">+593 99 421 5836</a></li>
+          <li><a href="https://wa.me/593994215836" target="_blank" rel="noopener">WhatsApp directo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="https://instagram.com/birm.salud" target="_blank" rel="noopener">Instagram · @birm.salud</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#ciencia">La ciencia</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-legal">
+      <span>© 2026 BIRM<sup style="font-size:8px;">®</sup> — Todos los derechos reservados</span>
+      <span>Producto natural · No constituye medicamento de prescripción</span>
+    </div>
+  </footer>
+
+  <!-- ===========================================================
+       Floating cart FAB
+       =========================================================== -->
+  <button class="cart-fab" id="cart-fab" aria-label="Abrir carrito">
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 3h2l1.5 9h7L14 5H4.5" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="6" cy="14" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="14" r="1" fill="currentColor" stroke="none" />
+    </svg>
+    <span>Ver carrito</span>
+    <span class="cart-fab-count" id="cart-fab-count">0</span>
+  </button>
+
+  <!-- ===========================================================
+       Cart drawer + backdrop
+       =========================================================== -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrito" data-view="cart">
+    <!-- View: CART -->
+    <div class="cart-view" data-view="cart">
+      <div class="cart-head">
+        <h3>Tu pedido</h3>
+        <button class="cart-close" data-cart-close aria-label="Cerrar">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="cart-body" id="cart-body"></div>
+      <div class="cart-foot">
+        <div class="cart-foot-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-foot-row">
+          <span>Envío</span>
+          <span class="cart-foot-muted">A coordinar</span>
+        </div>
+        <div class="cart-foot-row is-total">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <div class="cart-pay-buttons">
+          <button class="btn-pay-primary" id="cart-pay-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="2.2"/>
+              <path d="M2.5 9.5h19" stroke-linecap="round"/>
+            </svg>
+            <span>Pagar con tarjeta</span>
+            <span class="btn-pay-amount" id="cart-pay-amount">$0.00</span>
+          </button>
+          <button class="btn-pay-secondary" id="cart-pay-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 012.41 5.83c.02 4.54-3.68 8.23-8.22 8.23z"/>
+            </svg>
+            Coordinar por WhatsApp
+          </button>
+        </div>
+        <div class="cart-pay-badges">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">AMEX</span>
+          <span class="pay-badge">Diners</span>
+          <span class="pay-badge">Transfer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- View: CHECKOUT (tarjeta) -->
+    <div class="cart-view" data-view="checkout" hidden>
+      <div class="cart-head">
+        <button class="cart-back" data-cart-back aria-label="Volver">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M10 3L4 8l6 5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <h3>Pago con tarjeta</h3>
+        <button class="cart-close" data-cart-close aria-label="Cerrar">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <form class="cart-checkout-form" id="checkout-form" novalidate>
+        <div class="checkout-preview">
+          <div class="checkout-preview-line">
+            <span>Total del pedido</span>
+            <strong id="checkout-total">$0.00</strong>
+          </div>
+          <div class="checkout-preview-line muted">
+            <span id="checkout-summary">0 productos</span>
+            <button type="button" class="checkout-edit" data-cart-back>editar</button>
+          </div>
+        </div>
+
+        <div class="checkout-card-preview" id="card-preview">
+          <div class="card-chip"></div>
+          <div class="card-brand" id="card-brand">···</div>
+          <div class="card-number" id="card-number-preview">•••• •••• •••• ••••</div>
+          <div class="card-row">
+            <div class="card-field">
+              <span>Titular</span>
+              <strong id="card-name-preview">NOMBRE APELLIDO</strong>
+            </div>
+            <div class="card-field">
+              <span>Vence</span>
+              <strong id="card-exp-preview">MM/AA</strong>
+            </div>
+          </div>
+        </div>
+
+        <fieldset class="checkout-fieldset">
+          <legend>Datos de tarjeta</legend>
+          <label class="checkout-field">
+            <span>Número de tarjeta</span>
+            <input type="text" inputmode="numeric" autocomplete="cc-number" id="f-card" placeholder="1234 5678 9012 3456" maxlength="23" />
+          </label>
+          <label class="checkout-field">
+            <span>Nombre como aparece en la tarjeta</span>
+            <input type="text" autocomplete="cc-name" id="f-name" placeholder="Nombre Apellido"/>
+          </label>
+          <div class="checkout-field-row">
+            <label class="checkout-field">
+              <span>Vencimiento</span>
+              <input type="text" inputmode="numeric" autocomplete="cc-exp" id="f-exp" placeholder="MM/AA" maxlength="5"/>
+            </label>
+            <label class="checkout-field">
+              <span>CVV</span>
+              <input type="text" inputmode="numeric" autocomplete="cc-csc" id="f-cvv" placeholder="123" maxlength="4"/>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-fieldset">
+          <legend>Entrega</legend>
+          <label class="checkout-field">
+            <span>Correo electrónico</span>
+            <input type="email" autocomplete="email" id="f-email" placeholder="tu@correo.com"/>
+          </label>
+          <label class="checkout-field">
+            <span>Teléfono</span>
+            <input type="tel" autocomplete="tel" id="f-phone" placeholder="099 421 5836"/>
+          </label>
+          <label class="checkout-field">
+            <span>Dirección de entrega</span>
+            <input type="text" autocomplete="street-address" id="f-addr" placeholder="Calle, número, ciudad"/>
+          </label>
+        </fieldset>
+
+        <div class="checkout-secure">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3" y="7" width="10" height="7" rx="1.2"/>
+            <path d="M5 7V4.5a3 3 0 016 0V7"/>
+          </svg>
+          <span>Conexión segura · tus datos no se almacenan en este servidor</span>
+        </div>
+
+        <button type="submit" class="btn-pay-primary checkout-submit" id="checkout-submit">
+          <span id="checkout-submit-text">Pagar</span>
+          <span id="checkout-submit-amount">$0.00</span>
+        </button>
+        <p class="checkout-note">Esta es una demostración de UI — la pasarela real se conectará con PayPhone / Datafast / Kushki cuando se integre.</p>
+      </form>
+    </div>
+
+    <!-- View: SUCCESS -->
+    <div class="cart-view" data-view="success" hidden>
+      <div class="cart-head" style="justify-content:flex-end;">
+        <button class="cart-close" data-cart-close aria-label="Cerrar">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="checkout-success">
+        <div class="checkout-success-mark">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="24" cy="24" r="22"/>
+            <path d="M15 24l7 7 12-14" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>¡Pedido recibido!</h3>
+        <p>Te enviamos los detalles a tu correo. Un asesor te contactará en las próximas horas para confirmar la entrega.</p>
+        <div class="checkout-success-order" id="success-order"></div>
+        <button class="btn btn-ghost" data-cart-close>Seguir explorando</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===========================================================
+       Toast
+       =========================================================== -->
+  <div class="toast" id="toast">
+    <span class="toast-dot"></span>
+    <span class="toast-text">Producto agregado</span>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="app.js"></script>
+  <script src="checkout.js" defer></script>
+</body>
+</html>

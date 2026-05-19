@@ -435,7 +435,7 @@ p { margin: 0; text-wrap: pretty; }
   max-width: calc(100vw - 120px);
   padding: 28px;
   border-radius: var(--radius-lg);
-  background: rgba(8, 20, 16, 0.62);
+  background: rgba(7, 16, 12, 0.9);
   backdrop-filter: saturate(140%) blur(22px);
   -webkit-backdrop-filter: saturate(140%) blur(22px);
   border: 1px solid var(--border-bright);
@@ -1328,6 +1328,8 @@ html.reduce-motion .scroll-cue::before { animation: none; }
     bottom: 100px;
     padding: 20px 20px 18px;
     border-radius: 18px;
+    /* Más opaco en móvil — el texto debe leerse sobre frames brillantes */
+    background: rgba(6, 13, 10, 0.96);
   }
   .product-popup h3 { font-size: 26px; }
   .product-popup-claim { font-size: 13px; margin-bottom: 16px; line-height: 1.45; }
